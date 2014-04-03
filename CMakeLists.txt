@@ -68,7 +68,10 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 	set(ARCHIVE_DIR "${PROJECT_BINARY_DIR}/bin")
 	# Add windows target & disable warnings
 	add_definitions(/DDEBUG=1)
-	add_definitions(/DGLSLDB_WIN /W3 /D_CRT_SECURE_NO_WARNINGS /wd4005 /wd4996 /nologo)
+	# if (MSVC)
+		#add_definitions(/DGLSLDB_WIN /W3 /D_CRT_SECURE_NO_WARNINGS /wd4005 /wd4996 /nologo)
+	# else if (MINGW)
+		add_definitions(/DGLSLDB_WIN /D_CRT_SECURE_NO_WARNINGS)
 endif()
 
 # maintainer mode
