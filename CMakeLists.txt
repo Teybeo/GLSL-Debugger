@@ -71,7 +71,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 	# if (MSVC)
 		#add_definitions(/DGLSLDB_WIN /W3 /D_CRT_SECURE_NO_WARNINGS /wd4005 /wd4996 /nologo)
 	# else if (MINGW)
-		add_definitions(/DGLSLDB_WIN /D_CRT_SECURE_NO_WARNINGS)
+		add_definitions(/DGLSLDB_WIN /D_CRT_SECURE_NO_WARNINGS -std=gnu++11)
 endif()
 
 # maintainer mode
